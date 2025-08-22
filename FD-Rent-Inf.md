@@ -1,75 +1,52 @@
 ```mermaid
 graph TD
-    subgraph "Core Driver"
-        A["<b>Resource Rents</b><br>(Windfall Income)"]
+    subgraph "Initial Shock"
+        A["💰<br><b>Resource Rents</b><br>(Windfall Income)"]
     end
 
     subgraph "Inflationary Channels"
-        B1("<b>Exchange Rate Channel</b><br>FX Inflows → Real Appreciation → Non-Tradable Price Increases")
-        B2("<b>Fiscal Channel</b><br>Volatility → Procyclical Spending & Deficits")
-        B3("<b>Monetary/Liquidity Channel</b><br>FX Inflows → Unsterilized Liquidity → Credit Booms")
-        B4("<b>Institutional Channel</b><br>Weak Institutions → Rent Seeking & Misallocation")
+        B1("<b>Exchange Rate Channel</b><br>FX Inflows & Currency Appreciation")
+        B2("<b>Fiscal Channel</b><br>Spending Volatility & Deficits")
+        B3("<b>Liquidity & Credit Channel</b><br>Excess Liquidity & Credit Booms")
     end
 
-    subgraph "Moderating Factor: Financial Development"
-        C1["<b>Low Financial Development</b><br>(Amplifies Shocks)"]
-        C2["<b>High Financial Development</b><br>(Absorbs Shocks)"]
+    subgraph "Path 1: Low Financial Development (Amplifies Shocks)"
+        C1["Weak financial system cannot absorb the shock"]
+        D1("➡️ High Exchange Rate Pass-Through")
+        D2("➡️ Monetary Financing of Deficits (Seigniorage)")
+        D3("➡️ Unsterilized Liquidity & Asset Bubbles")
+        E1("🔥<br><b>High & Volatile Inflation</b>")
     end
 
-    subgraph "Mechanisms & Effects"
-        D1("High Exchange Rate Pass-Through")
-        D2("Monetary Financing (Seigniorage)")
-        D3("Unsterilized Liquidity Injections & Asset Bubbles")
-        D4("Fiscal Dominance & Lack of Credibility")
-
-        E1("Hedging Instruments & Anchored Expectations<br>(Reduces Pass-Through)")
-        E2("Deep Bond Markets & Countercyclical Policy<br>(Enables Non-Inflationary Financing)")
-        E3("Sterilization Tools (SWFs, OMOs) & Prudential Oversight<br>(Absorbs Liquidity & Tempers Booms)")
-        E4("Credible Policy Frameworks (e.g., Inflation Targeting)<br>(Buffers Shocks)")
-    end
-
-    subgraph "Final Outcome"
-        F_High["<b>High & Volatile Inflation</b>"]
-        F_Low["<b>Low & Stable Inflation</b>"]
+    subgraph "Path 2: High Financial Development (Absorbs Shocks)"
+        C2["Developed financial system provides buffers"]
+        F1("✅ <b>Mitigating Effect:</b><br>Deep FX markets & anchored expectations reduce pass-through.")
+        F2("✅ <b>Mitigating Effect:</b><br>Bond markets provide non-inflationary financing for countercyclical policy.")
+        F3("✅ <b>Mitigating Effect:</b><br>Sterilization tools (e.g., SWFs) absorb liquidity & prudential oversight tempers credit booms.")
+        E2("🛡️<br><b>Low & Stable Inflation</b>")
     end
 
     A --> B1
     A --> B2
     A --> B3
-    A --> B4
-
+    
     B1 --> C1
     B2 --> C1
     B3 --> C1
-    B4 --> C1
 
     B1 --> C2
     B2 --> C2
     B3 --> C2
-    B4 --> C2
-    
-    C1 --> D1
-    C1 --> D2
-    C1 --> D3
-    C1 --> D4
 
-    C2 --> E1
-    C2 --> E2
-    C2 --> E3
-    C2 --> E4
+    C1 --> D1 --> E1
+    C1 --> D2 --> E1
+    C1 --> D3 --> E1
 
-    D1 --> F_High
-    D2 --> F_High
-    D3 --> F_High
-    D4 --> F_High
+    C2 --> F1 --> E2
+    C2 --> F2 --> E2
+    C2 --> F3 --> E2
 
-    E1 --> F_Low
-    E2 --> F_Low
-    E3 --> F_Low
-    E4 --> F_Low
-
-    style F_High fill:#ffcccc,stroke:#333,stroke-width:2px
-    style F_Low fill:#ccffcc,stroke:#333,stroke-width:2px
-    style C1 fill:#f9f9f9,stroke:#666
-    style C2 fill:#f9f9f9,stroke:#666
+    style A fill:#FFFACD,stroke:#333
+    style E1 fill:#FFCDD2,stroke:#B71C1C,stroke-width:2px
+    style E2 fill:#C8E6C9,stroke:#1B5E20,stroke-width:2px
 ```
