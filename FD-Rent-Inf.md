@@ -1,19 +1,19 @@
 ```mermaid
 graph TD
     subgraph "Core Driver"
-        A[<b>Resource Rents</b><br/><i>(Windfall Income)</i>]
+        A["<b>Resource Rents</b><br>(Windfall Income)"]
     end
 
     subgraph "Inflationary Channels"
-        B1(<b>Exchange Rate Channel</b><br/>FX Inflows → Real Appreciation → Non-Tradable Price Increases)
-        B2(<b>Fiscal Channel</b><br/>Volatility → Procyclical Spending & Deficits)
-        B3(<b>Monetary/Liquidity Channel</b><br/>FX Inflows → Unsterilized Liquidity → Credit Booms)
-        B4(<b>Institutional Channel</b><br/>Weak Institutions → Rent Seeking & Misallocation)
+        B1("<b>Exchange Rate Channel</b><br>FX Inflows → Real Appreciation → Non-Tradable Price Increases")
+        B2("<b>Fiscal Channel</b><br>Volatility → Procyclical Spending & Deficits")
+        B3("<b>Monetary/Liquidity Channel</b><br>FX Inflows → Unsterilized Liquidity → Credit Booms")
+        B4("<b>Institutional Channel</b><br>Weak Institutions → Rent Seeking & Misallocation")
     end
 
     subgraph "Moderating Factor: Financial Development"
-        C1[<b>Low Financial Development</b><br/><i>(Amplifies Shocks)</i>]
-        C2[<b>High Financial Development</b><br/><i>(Absorbs Shocks)</i>]
+        C1["<b>Low Financial Development</b><br>(Amplifies Shocks)"]
+        C2["<b>High Financial Development</b><br>(Absorbs Shocks)"]
     end
 
     subgraph "Mechanisms & Effects"
@@ -22,15 +22,15 @@ graph TD
         D3("Unsterilized Liquidity Injections & Asset Bubbles")
         D4("Fiscal Dominance & Lack of Credibility")
 
-        E1("Hedging Instruments & Anchored Expectations<br/><i>Reduces Pass-Through</i>")
-        E2("Deep Bond Markets & Countercyclical Policy<br/><i>Enables Non-Inflationary Financing</i>")
-        E3("Sterilization Tools (SWFs, OMOs) & Prudential Oversight<br/><i>Absorbs Liquidity & Tempers Booms</i>")
-        E4("Credible Policy Frameworks (e.g., Inflation Targeting)<br/><i>Buffers Shocks</i>")
+        E1("Hedging Instruments & Anchored Expectations<br>(Reduces Pass-Through)")
+        E2("Deep Bond Markets & Countercyclical Policy<br>(Enables Non-Inflationary Financing)")
+        E3("Sterilization Tools (SWFs, OMOs) & Prudential Oversight<br>(Absorbs Liquidity & Tempers Booms)")
+        E4("Credible Policy Frameworks (e.g., Inflation Targeting)<br>(Buffers Shocks)")
     end
 
     subgraph "Final Outcome"
-        F_High[<b>High & Volatile Inflation</b>]
-        F_Low[<b>Low & Stable Inflation</b>]
+        F_High["<b>High & Volatile Inflation</b>"]
+        F_Low["<b>Low & Stable Inflation</b>"]
     end
 
     A --> B1
