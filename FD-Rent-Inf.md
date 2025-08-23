@@ -34,6 +34,6 @@ graph TD
         F1 & F2 & F3 --> E2["🛡️<br><b>VIRTUOUS CYCLE</b><br>Macroeconomic Stability,<br>Low & Stable Inflation"]
     end
 
-    E1 -.->|<i>Financial Resource Curse<br>(Hinders Development)</i>| C
-    E2 -.->|<i>Reinforcing Development</i>| C
+    E1 -.->|"Financial Resource Curse<br>(Hinders Development)"| C
+    E2 -.->|"Reinforcing Development"| C
 ```
