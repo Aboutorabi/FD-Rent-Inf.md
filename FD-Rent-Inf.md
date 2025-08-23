@@ -1,52 +1,39 @@
 ```mermaid
 graph TD
-    subgraph "Initial Shock"
-        A["💰<br><b>Resource Rents</b><br>(Windfall Income)"]
+    subgraph "INITIAL SHOCK"
+        A["💰<br><b>Resource Rents</b><br>(Large, Volatile Inflows)"]
     end
 
-    subgraph "Inflationary Channels"
-        B1("<b>Exchange Rate Channel</b><br>FX Inflows & Currency Appreciation")
-        B2("<b>Fiscal Channel</b><br>Spending Volatility & Deficits")
-        B3("<b>Liquidity & Credit Channel</b><br>Excess Liquidity & Credit Booms")
+    subgraph "INFLATIONARY PRESSURES & CHANNELS"
+        B1["<b>Dutch Disease</b><br>(Real Exchange Rate Appreciation)"]
+        B2["<b>Fiscal Pressure</b><br>(Procyclical Spending & Deficits)"]
+        B3["<b>Monetary Pressure</b><br>(Liquidity Injections & Credit Booms)"]
     end
-
-    subgraph "Path 1: Low Financial Development (Amplifies Shocks)"
-        C1["Weak financial system cannot absorb the shock"]
-        D1("➡️ High Exchange Rate Pass-Through")
-        D2("➡️ Monetary Financing of Deficits (Seigniorage)")
-        D3("➡️ Unsterilized Liquidity & Asset Bubbles")
-        E1("🔥<br><b>High & Volatile Inflation</b>")
-    end
-
-    subgraph "Path 2: High Financial Development (Absorbs Shocks)"
-        C2["Developed financial system provides buffers"]
-        F1("✅ <b>Mitigating Effect:</b><br>Deep FX markets & anchored expectations reduce pass-through.")
-        F2("✅ <b>Mitigating Effect:</b><br>Bond markets provide non-inflationary financing for countercyclical policy.")
-        F3("✅ <b>Mitigating Effect:</b><br>Sterilization tools (e.g., SWFs) absorb liquidity & prudential oversight tempers credit booms.")
-        E2("🛡️<br><b>Low & Stable Inflation</b>")
-    end
-
-    A --> B1
-    A --> B2
-    A --> B3
     
-    B1 --> C1
-    B2 --> C1
-    B3 --> C1
+    subgraph "CRITICAL JUNCTURE"
+        C{"<b>Level of Financial &<br>Institutional Development</b>"}
+    end
 
-    B1 --> C2
-    B2 --> C2
-    B3 --> C2
+    A --> B1 & B2 & B3 --> C
 
-    C1 --> D1 --> E1
-    C1 --> D2 --> E1
-    C1 --> D3 --> E1
+    subgraph "PATH A: The Resource Curse 📉"
+        style PathA fill:#ffebee,stroke:#c62828
+        C --"<b>Low / Shallow</b>"--> D["<b>Weak Buffers & Amplification</b>"]
+        D --> D1["- High Exchange Rate Pass-Through<br>- Ineffective Monetary Policy"]
+        D --> D2["- Monetary Financing (Seigniorage)<br>- Procyclical Fiscal Policy"]
+        D --> D3["- Unsterilized Liquidity<br>- Unchecked Credit Booms & Asset Bubbles"]
+        D1 & D2 & D3 --> E1["🔥<br><b>VICIOUS CYCLE</b><br>Macroeconomic Instability,<br>High & Volatile Inflation"]
+    end
 
-    C2 --> F1 --> E2
-    C2 --> F2 --> E2
-    C2 --> F3 --> E2
+    subgraph "PATH B: The Resource Blessing 📈"
+        style PathB fill:#e8f5e9,stroke:#2e7d32
+        C --"<b>High / Deep</b>"--> F["<b>Strong Buffers & Mitigation</b>"]
+        F --> F1["✅ <b>Absorption Tools:</b><br>Deep FX Markets, Anchored Expectations"]
+        F --> F2["✅ <b>Discipline Tools:</b><br>Bond Markets, Countercyclical Rules, SWFs"]
+        F --> F3["✅ <b>Stability Tools:</b><br>Sterilization Instruments, Prudential Oversight"]
+        F1 & F2 & F3 --> E2["🛡️<br><b>VIRTUOUS CYCLE</b><br>Macroeconomic Stability,<br>Low & Stable Inflation"]
+    end
 
-    style A fill:#FFFACD,stroke:#333
-    style E1 fill:#FFCDD2,stroke:#B71C1C,stroke-width:2px
-    style E2 fill:#C8E6C9,stroke:#1B5E20,stroke-width:2px
+    E1 -.->|<i>Financial Resource Curse<br>(Hinders Development)</i>| C
+    E2 -.->|<i>Reinforcing Development</i>| C
 ```
